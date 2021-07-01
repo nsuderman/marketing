@@ -25,7 +25,7 @@ def order_cluster(cluster_field_name, target_field_name,df,ascending):
     return df_final
 
 
-@st.cache(suppress_st_warning=True)
+#@st.cache(suppress_st_warning=True)
 def analysis(df):
     st.write('We invest in customers (acquisition costs, offline ads, promotions, discounts & etc.) to '
              'generate revenue and be profitable. Naturally, these actions make some customers super valuable in '
