@@ -112,7 +112,7 @@ if __name__ == '__main__':
                                     })
             y_pred = model.predict(predict)[0]
             if y_pred == 2:
-                y_pred = "Hight LTV"
+                y_pred = "High LTV"
             elif y_pred == 1:
                 y_pred = "Mid LTV"
             elif y_pred == 0:
