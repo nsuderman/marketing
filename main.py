@@ -1,5 +1,6 @@
 from data import data
 import streamlit as st
+from modules import know_your_metrics as kym
 
 
 if __name__ == '__main__':
@@ -41,6 +42,8 @@ if __name__ == '__main__':
     elif side_menu_selectbox == 'Know Your Metrics':
         st.header('Know Your Metrics')
         st.write('')
+
+        kym.run()
 
     elif side_menu_selectbox == 'Customer Segmentation':
         st.header('Customer Segmentation')
