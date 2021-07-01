@@ -100,9 +100,9 @@ if __name__ == '__main__':
 
         form = st.form(key='my_form')
         name = form.text_input('Customer Name/ID')
-        recency = form.slider('Number of Days Since Last Purchase',min_value=0,max=365)
-        frequency = form.slider('Number of Purchases in The Last 3 Months', min_value=0, max=500)
-        revenue = form.slider('Total $ Spent in The Last 3 Months', min_value=0, max=12000,step=100)
+        recency = form.slider('Number of Days Since Last Purchase',min_value=0,max_value=365)
+        frequency = form.slider('Number of Purchases in The Last 3 Months', min_value=0, max_value=500)
+        revenue = form.slider('Total $ Spent in The Last 3 Months', min_value=0, max_value=12000,step=100)
 
         submit = form.form_submit_button('Submit')
         if submit:
