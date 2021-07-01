@@ -209,6 +209,7 @@ def analysis(df):
     # plt.title(f'Correlation Matrix')
 
     # create X and y, X will be feature set and y is the label - LTV
+    st.write(tx_class)
     X = tx_class.drop(['LTVCluster', 'm6_Revenue'], axis=1)
     y = tx_class['LTVCluster']
     return X, y
