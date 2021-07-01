@@ -110,7 +110,9 @@ if __name__ == '__main__':
                                     'Frequency': [frequency],
                                     'Revenue': [revenue]
                                     })
+
             y_pred = model.predict(predict)[0]
+            #st.write(model.get_booster().feature_names)
             if y_pred == 2:
                 y_pred = "High LTV"
             elif y_pred == 1:
