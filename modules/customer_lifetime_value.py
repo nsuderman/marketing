@@ -228,7 +228,7 @@ def run(df):
 
 
     max_depth = st.sidebar.slider('Max Depth',min_value=1,max_value=100,value=40)
-    gamma = st.sidebar.slider('Gamma',min_value=0.0,max_value=1.0,value=0.7)
+    gamma = st.sidebar.slider('Gamma',min_value=0.0,max_value=1.0,value=0.96)
     min_child_weight = st.sidebar.slider('Min Child Weight',min_value=1,max_value=10,value=6)
     learning_rate = st.sidebar.slider('Learning Rate',min_value=.05,max_value=.3,value=.1)
 
