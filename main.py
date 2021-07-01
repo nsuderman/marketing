@@ -5,6 +5,8 @@ from modules import segmentation as seg
 from modules import customer_lifetime_value as clv
 from streamlit.server.server import Server
 from streamlit.report_thread import get_report_ctx
+import pickle
+import pandas as pd
 import os
 import warnings
 warnings.filterwarnings("ignore")
@@ -49,7 +51,7 @@ if __name__ == '__main__':
                                                        'Know Your Metrics',
                                                        'Customer Segmentation',
                                                        'Customer Lifetime Value Prediction',
-                                                       )
+                                                       'Predict Customer Segment')
                                                )
 
     if side_menu_selectbox == 'Home':
@@ -89,3 +91,35 @@ if __name__ == '__main__':
         st.write('')
 
         clv.run(data)
+
+    elif side_menu_selectbox == 'Predict Customer Segment':
+        st.header('Customer Lifetime Value Prediction')
+        st.write('')
+
+        model = pickle.load(open("model.p", "rb"))
+
+        form = st.form(key='my_form')
+        name = form.text_input('Customer Name/ID')
+        recency = form.slider('Number of Days Since Last Purchase',min_value=0,max=365)
+        frequency = form.slider('Number of Purchases in The Last 3 Months', min_value=0, max=500)
+        revenue = form.slider('Total $ Spent in The Last 3 Months', min_value=0, max=12000,step=100)
+
+        submit = form.form_submit_button('Get Customer Segment')
+        if submit:
+            predict = pd.DataFrame({'Recency': [recency],
+                                    'Frequency': [frequency],
+                                    'Revenue': [revenue]
+                                    })
+            y_pred = model.predict(predict)[0]
+            if y_pred == 2:
+                y_pred = "Hight LTV"
+            elif y_pred == 1:
+                y_pred = "Mid LTV"
+            elif y_pred == 0:
+                y_pred = "Low LTV"
+            else:
+                y_pred = "Something Went"
+
+            output = f'Customer {name} is a {y_pred}'
+            st.write('')
+            st.header(output)
