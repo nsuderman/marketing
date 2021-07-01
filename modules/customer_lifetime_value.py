@@ -164,7 +164,7 @@ def analysis(df):
 
     st.markdown('____')
 
-    st.write('We will use a regression model to predict the LTV for our customers based on 3 segments.')
+    st.write('We will use a XGBoost model to predict the LTV for our customers based on 3 segments.')
     st.write('Low LTV')
     st.write('Mid LTV')
     st.write('Hight LTV')
