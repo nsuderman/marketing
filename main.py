@@ -49,12 +49,7 @@ if __name__ == '__main__':
                                                        'Know Your Metrics',
                                                        'Customer Segmentation',
                                                        'Customer Lifetime Value Prediction',
-                                                       'Churn Prediction',
-                                                       'Predicting Next Purchase Day',
-                                                       'Predicting Sales',
-                                                       'Market Response Models',
-                                                       'Uplift Modeling',
-                                                       'A/B Testing Design and Execution')
+                                                       )
                                                )
 
     if side_menu_selectbox == 'Home':
@@ -94,29 +89,3 @@ if __name__ == '__main__':
         st.write('')
 
         clv.run(data)
-
-    elif side_menu_selectbox == 'Churn Prediction':
-        st.header('Churn Prediction')
-        st.write('')
-
-    elif side_menu_selectbox == 'Predicting Next Purchase Day':
-        st.header('Predicting Next Purchase Day')
-        st.write('')
-
-    elif side_menu_selectbox == 'Predicting Sales':
-        st.header('Predicting Sales')
-        st.write('')
-
-    elif side_menu_selectbox == 'Market Response Models':
-        st.header('Market Response Models')
-        st.write('')
-
-    elif side_menu_selectbox == 'Uplift Modeling':
-        st.header('Uplift Modeling')
-        st.write('')
-
-    elif side_menu_selectbox == 'A/B Testing Design and Execution':
-        st.header('A/B Testing Design and Execution')
-        st.write('')
-
-
