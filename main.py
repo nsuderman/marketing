@@ -6,6 +6,8 @@ from modules import customer_lifetime_value as clv
 from streamlit.server.server import Server
 from streamlit.report_thread import get_report_ctx
 import os
+import warnings
+warnings.filterwarnings("ignore")
 
 def watchers():
     # get report context
