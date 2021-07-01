@@ -5,7 +5,6 @@ from chart_studio import plotly as py
 import plotly.graph_objs as go
 
 
-
 def run(df):
     st.markdown('Before diving into the analysis and coding we need to understand what our key metrics are, '
              'and more specifically what is our __North Star__ metrics.')
