@@ -104,7 +104,7 @@ if __name__ == '__main__':
         frequency = form.slider('Number of Purchases in The Last 3 Months', min_value=0, max=500)
         revenue = form.slider('Total $ Spent in The Last 3 Months', min_value=0, max=12000,step=100)
 
-        submit = form.form_submit_button('Get Customer Segment')
+        submit = st.form_submit_button('Get Customer Segment')
         if submit:
             predict = pd.DataFrame({'Recency': [recency],
                                     'Frequency': [frequency],
