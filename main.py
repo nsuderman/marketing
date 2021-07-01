@@ -21,13 +21,13 @@ def watchers():
     session = session_info.session
 
     # register watcher
-    # session._local_sources_watcher._register_watcher(
-    #     os.path.join(os.path.dirname(__file__), 'modules\know_your_metrics.py'),'dummy:modules\know_your_metrics.py')
-    # session._local_sources_watcher._register_watcher(
-    #     os.path.join(os.path.dirname(__file__), 'modules\segmentation.py'), 'dummy:modules\segmentation.py')
-    # session._local_sources_watcher._register_watcher(
-    #     os.path.join(os.path.dirname(__file__), 'modules\customer_lifetime_value.py'), 'dummy:modules\customer_lifetime_value.py')
-    #
+    session._local_sources_watcher._register_watcher(
+        os.path.join(os.path.dirname(__file__), './modules/know_your_metrics.py'),'dummy:modules/know_your_metrics.py')
+    session._local_sources_watcher._register_watcher(
+        os.path.join(os.path.dirname(__file__), './modules/segmentation.py'), 'dummy:modules/segmentation.py')
+    session._local_sources_watcher._register_watcher(
+        os.path.join(os.path.dirname(__file__), './modules/customer_lifetime_value.py'), 'dummy:modules/customer_lifetime_value.py')
+
 
 if __name__ == '__main__':
     st.set_page_config(page_title="Marketing", layout='wide', initial_sidebar_state='auto')
